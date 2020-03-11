@@ -1,0 +1,35 @@
+/* the * means global styling */
+* { 
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.container {
+    background-color: peachpuff;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: row;  /*if flex-direction is not specified, it defaults to a row. If you want columns, you must specify it in flex-direction. There is also row-reverse and column-reverse, which will reverse the order of the flex items and show them at the opposite end of the screen.*/
+    justify-content: center; /* this controls where the items on the row or column are positioned. Default is left. space-between is an option that will spread all rows or columns out with equal space between them, but with the outer boxes at the margins. space-around will put equal space on the left and the right of each item. space-evenly makes sure there is equal space around each box, including the end boxes. flex-start and flex-end are also options. If you want all items right next to each other at either end, you can remove the margins and choose start or end. to have them appear on the left or right, respectively.*/
+    align-items: center; /*this handles the vertical alignment in comparison to the largest item. so if we choose center, the other items will be centered with that large item as the base. flex-start and flex-end will align them at the top/bottom, still with the largest item as the basis of comparison.There is another choice called stretch, and that will make all other items the same size vertically/horizontally respective to row/column of the largest item.*/
+
+}
+
+.item {
+    background-color: gainsboro;
+    padding: 17px;
+    margin: 15px;
+    color: navy;
+    font-size: 40px;
+}
+
+.i2 {
+    height: 200px; /*note on the html page that i2 also has the attributes of item.*/
+}
+
+.i4 {
+    font-size: 160px; /*note that the items are aligned based on the item(box), and not on the text. See the baseline.html to see how text is used as the basis for alignment.*/
+}
+
+

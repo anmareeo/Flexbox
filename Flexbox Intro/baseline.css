@@ -1,0 +1,36 @@
+/* the * means global styling */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    .container {
+        background-color: palegreen;
+        padding: 10px;
+    
+        display: flex;
+        flex-direction: row;  
+        justify-content: space-evenly; 
+        align-items: baseline; /*baseline uses the text as the basis for alignment. so if the text in an item is really large, the text in the other items will be aligned witht the bottom of the text there.*/
+    
+    }
+    
+    .item {
+        background-color: purple;
+        padding: 17px;
+        margin: 15px;
+        color: white;
+        font-size: 40px;
+    }
+    
+    .i2 {
+        height: 200px; /*note on the html page that i2 also has the attributes of item.*/
+    }
+    
+    .i4 {
+        font-size: 160px;
+    }
+    
+    
+    

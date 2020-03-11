@@ -1,0 +1,116 @@
+/* the * means global styling */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    .container {
+        background-color: coral;
+        padding: 10px;
+    
+        display: flex;
+        flex-direction: row;  
+        justify-content: space-evenly; 
+        align-items: center; 
+    
+    }
+    
+    .item {
+        background-color: cornflowerblue;
+        padding: 17px;
+        margin: 15px;
+        color: cornsilk;
+        font-size: 40px;
+        flex-grow:1 /*this makes each item grow to maximum capacity(fills in all space it can). If the margins are removed, all items will crash into each other*/
+    }
+
+
+    .container1 {
+        background-color: plum;
+        padding: 10px;
+    
+        display: flex;
+        flex-direction: row;  
+        justify-content: flex-start; 
+        align-items: center; 
+    
+    }
+    
+    .item1 {
+        background-color: gainsboro;
+        padding: 17px;
+        /* margin: 15px; */
+        color:black;
+        font-size: 40px;
+        flex-grow:1 /*this makes each item grow to maximum capacity(fills in all space it can). Since the margins have been commented out, all items are smashed together. See the first row. The flex-grow number only matters if we are trying to make other items around it larger. See the last row.*/
+    }
+
+    .container2 {
+        background-color: plum;
+        padding: 10px;
+    
+        display: flex;
+        flex-direction: row;  
+        justify-content: flex-start; 
+        align-items: center; 
+    
+    }
+    
+    .item2 {
+        background-color: gainsboro;
+        padding: 17px;
+        margin: 15px; 
+        color:black;
+        font-size: 40px;
+        flex-grow:1 /*this makes each item grow to maximum capacity(fills in all space it can). Since the margins have been commented out, all items are smashed together. See the first row.*/
+    }
+    
+    .i1 {
+        align-self: flex-start; /*the parent is defaulted to align-center, but we can allow an item to do its own thing by using the align-self. Look at the second row to see that all items are centered except for item 1. we can also use flex-end. flex-stretch will make item one the same size as the largest item(box).*/
+        order: 3; /*see the notes about order below on .i4*/
+    }
+    
+    .i2 {
+        height: 200px;
+        flex-shrink:0;
+    }
+    .i3 {
+        height: 200px;
+        flex-grow:4; /*note that this has a grow number 4 times the others, so other items will shrink because item 3 is taking up more capacity.*/
+    }
+    
+    .i4 {
+        order:-1; /* the order in which the items appear is always set to zero. Each item always defaults to zero, so if you want to change the order in which an item appears, just set the order to a negative number. */
+        
+        /*
+        flex-grow:0;
+        flex-shrink: 0;
+        flex-basis: 300px;
+        */
+        
+        
+        /* used instead of width. can be a percentage or other measurement, but it will still shrink with the screen unless you give it a flex-shrink of 0. Look at the middle row of items.html. item 4 does not shrink, but the rest do.*/
+        
+        /*we always want to use flex properties, but we should use the shorthand, which is flex:flex-grow  flex-shrink  flex-basis in that order, so flex:0 0 300px is what we will replace the above three flexes above.*/
+        flex: 0 0 300px; /*remember there are no commas between the flex properties.*/
+
+        /*we usually want to give shrink a 1. we want components to all shrink with the decreasing screen size.
+        
+        
+    }
+
+    .i5 {
+        font-size: 100px; /*note on the html page that i2 also has the attributes of item.*/
+        order:-2; /*five appears first, because it has the lowest order number.*/
+        flex-basis:50%; /* note that in the second to last row in items.html, item 5 takes up half of the space because it is set to a percentage of 50. If we shrink the screen, item 5 will till occupy half of the space, and the remaining items(boxes) will share the rest of the space.*/
+    }
+    
+    .i6 {
+        flex-shrink: 1
+        
+    }
+    
+        
+    
+    

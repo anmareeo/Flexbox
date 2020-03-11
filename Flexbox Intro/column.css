@@ -1,0 +1,37 @@
+/* the * means global styling */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    .container {
+        background-color: darkmagenta;
+        padding: 10px;
+        height: 800px;
+    
+        display: flex;
+        flex-direction: column;  
+        justify-content: space-between; 
+        align-items: flex-start; /* note that when the flex direction is a column, align-items will over-ride justify content. When justify-content is set to center, but align items is not, the items will not be centered; */
+    
+    }
+    
+    .item {
+        background-color: yellow;
+        padding: 17px;
+        margin: 15px;
+        color:darkviolet;
+        font-size: 40px;
+    }
+    
+    .i2 {
+        height: 200px; /*note on the html page that i2 also has the attributes of item.*/
+    }
+    
+    .i4 {
+        font-size: 160px;
+    }
+    
+    
+    

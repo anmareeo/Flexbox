@@ -1,0 +1,40 @@
+/* the * means global styling */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    .container {
+        background-color: peachpuff;
+        padding: 10px;
+        height: 1000px;
+    
+        display: flex;
+        flex-direction: row;  
+        justify-content: center;
+        align-items: stretch; /*this aligns items along the row.*/
+
+        flex-wrap: wrap; /*this allows the items to wrap to the next row if the screen is shrunk*/
+        align-content: stretch; /* stretch is the default, and it has the same options as align items (stretch, space-between, space-around).  This aligns rows across the entire axis, whereas align-items just aligns items*/
+    }
+    
+    .item {
+        background-color: gainsboro;
+        padding: 17px;
+        margin: 15px;
+        color: navy;
+        font-size: 40px;
+    }
+
+    .i2{
+
+        flex: 1 1 300px;
+    }
+
+    .i3{ 
+        font-size: 100px;
+        height: 300px;
+    }
+    
+  
